@@ -1,1 +1,15 @@
-Details
+<div>
+    <h3>{{ employee.first_name|capfirst }} {{ employee.last_name|capfirst }}</h3>
+    <p>{{ employee.email_id }}</p>
+    <p>{{ employee.phone_number }}</p>
+    <p>{{ employee.address }}</p>
+    <p>{{ employee.gender }}</p>
+    <p>{{ employee.joining_date }}</p>
+    <p>
+        {% if employee.jobs.all %}
+        {% for job in employee.jobs.all %}
+        <span>{{ job.name }}</span>
+        {% endfor %}
+        {% endif %}
+    </p>
+</div>
