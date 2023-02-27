@@ -21,4 +21,5 @@ from ems import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
+    path('employees/<int:employee_id>/', views.employee_detail, name='employee_detail'),
 ]
